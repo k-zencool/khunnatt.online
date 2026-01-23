@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # 1. Web Server (Nginx)
+  web:
+    image: nginx:alpine
+    container_name: khunnatt-web
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+      - db
+    networks:
+      - khunnatt-net
+
+  # 2. PHP Application
+  app:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: khunnatt-app
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - khunnatt-net
+
+  # 3. Database (MariaDB)
+  db:
+    image: mariadb:10.6
+    container_name: khunnatt-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: khunnatt_db
+      MYSQL_USER: natt          # <--- User มึง
+      MYSQL_PASSWORD: 1234      # <--- รหัสมึง
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - khunnatt-net
+
+  # 4. phpMyAdmin (จัดการ DB)
+  pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: khunnatt-pma
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root_password
+      PMA_ABSOLUTE_URI: http://localhost/phpmyadmin/ # <--- สำคัญสัสๆ สำหรับ Reverse Proxy
+    networks:
+      - khunnatt-net
+
+networks:
+  khunnatt-net:
+    driver: bridge
+
+volumes:
+  db_data:

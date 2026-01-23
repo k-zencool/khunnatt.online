@@ -1,0 +1,162 @@
+/* assets/css/style.css - ธีมหลัก KhunNatt System */
+
+/* 1. นำเข้าฟอนต์ Kanit ให้ดูทันสมัย */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+/* 2. Global Style (ตั้งค่าพื้นฐานทั้งเว็บ) */
+body {
+    background-color: #0f0f0f; /* ดำสนิท */
+    color: #e0e0e0; /* ตัวหนังสือขาวหม่นๆ สบายตา */
+    font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* ถ้าหน้าไหนเนื้อหาเยอะ ให้ยอมให้ Scroll ได้ */
+body.d-block {
+    display: block !important;
+}
+
+a { text-decoration: none; }
+
+/* --- 3. Main Box (กล่องกลางจอ หน้า Login & Index) --- */
+.main-box {
+    background: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #333;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 200, 83, 0.1); /* แสงเขียวจางๆ */
+    width: 100%;
+    max-width: 420px; /* ไม่ให้กว้างเกินไปบนคอม */
+    margin: 20px;
+}
+
+/* --- 4. Wallet Specific (หน้ากระเป๋าตังค์) --- */
+.balance-card {
+    background: linear-gradient(135deg, #00c853 0%, #009688 100%); /* ไล่สีเขียว */
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 200, 83, 0.3); /* เงาเขียวฟุ้งๆ */
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+/* เพิ่มลายน้ำจางๆ ในการ์ด */
+.balance-card::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.transaction-item {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2d2d2d;
+    transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+    transform: translateX(5px); /* ขยับขวาเล็กน้อยตอนเอาเมาส์ชี้ */
+    border-color: #444;
+    background: #222;
+}
+
+.amount-inc { color: #00e676; font-weight: bold; text-shadow: 0 0 10px rgba(0, 230, 118, 0.2); }
+.amount-exp { color: #ff5252; font-weight: bold; text-shadow: 0 0 10px rgba(255, 82, 82, 0.2); }
+
+/* --- 5. Form Elements (ช่องกรอกข้อมูล) --- */
+.form-control {
+    background-color: #2b2b2b !important;
+    border: 1px solid #444 !important;
+    color: white !important;
+    padding: 12px;
+    border-radius: 10px;
+}
+.form-control:focus {
+    background-color: #333 !important;
+    border-color: #00c853 !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 200, 83, 0.25) !important;
+}
+
+/* --- 6. Buttons (ปุ่มกดต่างๆ) --- */
+.btn-game {
+    background-color: #00c853;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.btn-game:hover {
+    background-color: #00e676;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 200, 83, 0.4);
+}
+
+.btn-google {
+    background-color: #db4437;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.btn-google:hover {
+    background-color: #c53929;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(219, 68, 55, 0.4);
+}
+
+/* --- 7. Badges (ยศตัวละคร) --- */
+.role-badge {
+    font-size: 0.85rem;
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.badge-gm { background-color: #d32f2f; color: white; box-shadow: 0 0 15px rgba(211, 47, 47, 0.5); }
+.badge-player { background-color: #1976d2; color: white; box-shadow: 0 0 15px rgba(25, 118, 210, 0.5); }
+.badge-npc { background-color: #616161; color: white; }
+
+/* --- 8. Utilities (ของใช้จุกจิก) --- */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #666;
+    margin: 25px 0;
+    font-size: 0.85rem;
+}
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #333;
+}
+.divider:not(:empty)::before { margin-right: .75em; }
+.divider:not(:empty)::after { margin-left: .75em; }
+
+/* Scrollbar สวยๆ (เฉพาะ Chrome/Safari) */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f0f0f; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
