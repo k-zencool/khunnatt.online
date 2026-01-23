@@ -1,0 +1,17 @@
+# .gitignore
+
+# 1. ไฟล์ความลับ (Database & Token)
+includes/db.php
+bot/bot_config.php
+login/google_config.php
+
+# 2. ไฟล์ระบบของ Mac (ที่ชอบสร้างเอง รกๆ)
+.DS_Store
+
+# 3. ไฟล์ Config ของ Editor (VS Code)
+.vscode/
+
+# 4. ไฟล์ Log หรือ Backup ต่างๆ (ถ้ามี)
+*.log
+*.bak
+*.sql
