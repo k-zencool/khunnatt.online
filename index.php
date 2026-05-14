@@ -414,7 +414,7 @@ $activeFilter    = (isset($_GET['cat']) && in_array($_GET['cat'], $validCategori
                 <span class="about-hl__lbl"><?= LANG === 'th' ? 'ปีประสบการณ์' : 'Years Experience' ?></span>
               </div>
               <div class="about-hl">
-                <span class="about-hl__val">7+</span>
+                <span class="about-hl__val">6+</span>
                 <span class="about-hl__lbl"><?= LANG === 'th' ? 'โปรเจกต์' : 'Projects Built' ?></span>
               </div>
               <div class="about-hl">
