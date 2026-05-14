@@ -1,0 +1,18 @@
+# uploads/.htaccess
+# Blocks direct browser access to anything in /uploads.
+# Prevents malicious script execution if a file is uploaded despite validation.
+
+# Deny all PHP/script execution
+<FilesMatch "\.(php|php3|php4|php5|php7|phtml|pl|py|cgi|sh|bash|exe|asp|aspx)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Deny direct directory listing
+Options -Indexes
+
+# Only allow safe media types to be served directly
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|pdf)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>

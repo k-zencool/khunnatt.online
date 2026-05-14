@@ -1,17 +1,28 @@
-# .gitignore
+# ── Secrets — NEVER commit these ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+includes/config.local.php
 
-# 1. ไฟล์ความลับ (Database & Token)
-includes/db.php
-bot/bot_config.php
-login/google_config.php
-
-# 2. ไฟล์ระบบของ Mac (ที่ชอบสร้างเอง รกๆ)
-.DS_Store
-
-# 3. ไฟล์ Config ของ Editor (VS Code)
-.vscode/
-
-# 4. ไฟล์ Log หรือ Backup ต่างๆ (ถ้ามี)
+# ── Docker volumes & generated data ──────────────────────────────────────────
+docker/data/
 *.log
-*.bak
-*.sql
+
+# ── User uploads (exclude from repo; deploy separately or use object storage) ─
+uploads/*
+!uploads/.htaccess
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ── Composer (if ever used) ───────────────────────────────────────────────────
+vendor/
+composer.lock
