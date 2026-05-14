@@ -414,7 +414,7 @@ $activeFilter    = (isset($_GET['cat']) && in_array($_GET['cat'], $validCategori
                 <span class="about-hl__lbl"><?= LANG === 'th' ? 'ปีประสบการณ์' : 'Years Experience' ?></span>
               </div>
               <div class="about-hl">
-                <span class="about-hl__val">5+</span>
+                <span class="about-hl__val">7+</span>
                 <span class="about-hl__lbl"><?= LANG === 'th' ? 'โปรเจกต์' : 'Projects Built' ?></span>
               </div>
               <div class="about-hl">
@@ -467,16 +467,16 @@ $activeFilter    = (isset($_GET['cat']) && in_array($_GET['cat'], $validCategori
             <div class="stack-group glass">
               <h4 class="stack-label">Backend</h4>
               <div class="stack-pills">
-                <?php foreach (['PHP 8.3','MySQL','MariaDB','PDO','REST API'] as $s): ?>
+                <?php foreach (['PHP 8.3','Node.js','Bun','Express.js','Hono','TypeScript'] as $s): ?>
                 <span class="stack-pill"><?= h($s) ?></span>
                 <?php endforeach; ?>
               </div>
             </div>
 
             <div class="stack-group glass">
-              <h4 class="stack-label">Infrastructure</h4>
+              <h4 class="stack-label">Database</h4>
               <div class="stack-pills">
-                <?php foreach (['Docker','Linux (Ubuntu)','Nginx','Bash / Shell','DirectAdmin'] as $s): ?>
+                <?php foreach (['MySQL','MariaDB','PostgreSQL','PDO','Drizzle ORM','Prisma'] as $s): ?>
                 <span class="stack-pill"><?= h($s) ?></span>
                 <?php endforeach; ?>
               </div>
@@ -485,16 +485,16 @@ $activeFilter    = (isset($_GET['cat']) && in_array($_GET['cat'], $validCategori
             <div class="stack-group glass">
               <h4 class="stack-label">Frontend</h4>
               <div class="stack-pills">
-                <?php foreach (['JavaScript','HTML / CSS','Tailwind CSS','GSAP','Figma'] as $s): ?>
+                <?php foreach (['JavaScript','TypeScript','HTML / CSS','Tailwind CSS','GSAP'] as $s): ?>
                 <span class="stack-pill"><?= h($s) ?></span>
                 <?php endforeach; ?>
               </div>
             </div>
 
             <div class="stack-group glass">
-              <h4 class="stack-label">IT &amp; Systems</h4>
+              <h4 class="stack-label">Infrastructure &amp; APIs</h4>
               <div class="stack-pills">
-                <?php foreach (['Active Directory','Networking','Windows Server','Git','IT Support'] as $s): ?>
+                <?php foreach (['Docker','Linux','Nginx','Git','Telegram Bot API','OpenAI API'] as $s): ?>
                 <span class="stack-pill"><?= h($s) ?></span>
                 <?php endforeach; ?>
               </div>

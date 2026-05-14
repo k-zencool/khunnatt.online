@@ -66,7 +66,67 @@ VALUES
         1,
         1   -- is_featured = true → rendered in the largest bento cell
     ),
-    -- 2. Personal portfolio website (this site)
+    -- 2. Aqua Platform — auth + Telegram bot monorepo
+    (
+        'Aqua Platform — ระบบ Auth & Telegram Bot',
+        'Aqua Platform — Auth System & Telegram Bot',
+        'web',
+        'Monorepo ระบบยืนยันตัวตนระดับ Enterprise พัฒนาด้วย Bun + Hono + Drizzle ORM + PostgreSQL ดีไซน์ Glassmorphism พร้อม OTP ยืนยันผ่าน Gmail API, bcryptjs และ Telegram Bot แยก container ด้วย Docker',
+        'Enterprise-grade authentication monorepo built with Bun, Hono, Drizzle ORM, and PostgreSQL. Glassmorphism UI, OTP verification via Gmail API, bcryptjs password hashing, and a companion Telegram bot — all containerised with Docker.',
+        NULL,
+        NULL,
+        2,
+        0
+    ),
+    -- 3. Aqua-Jarvis — AI Telegram bot SaaS
+    (
+        'Aqua-Jarvis — Telegram AI Assistant',
+        'Aqua-Jarvis — Telegram AI Assistant',
+        'web',
+        'ระบบ SaaS Telegram Bot ที่ผู้ใช้นำ OpenRouter API Key มาใช้งานได้เอง พัฒนาด้วย Node.js + Express + Prisma + EJS บอทรองรับ AI Tool-use (Function Calling) ผ่าน OpenRouter และมี Dashboard จัดการผู้ใช้',
+        'SaaS Telegram bot where users bring their own OpenRouter API key. Built with Node.js, Express, Prisma, and EJS. The bot supports AI function calling via OpenRouter, with a web dashboard for user management.',
+        NULL,
+        NULL,
+        3,
+        0
+    ),
+    -- 4. NextHand — second-hand marketplace
+    (
+        'NextHand — ตลาดซื้อขายสินค้ามือสอง',
+        'NextHand — Second-Hand Marketplace',
+        'web',
+        'แพลตฟอร์มซื้อขายสินค้ามือสองที่พัฒนาด้วย PHP + MySQL รองรับการลงขาย ค้นหา กรองตามหมวดหมู่ ระบบถูกใจ (Wishlist) และการยืนยันตัวตนผู้ขาย',
+        'A second-hand marketplace built with PHP and MySQL. Supports product listings, full-text search, category filtering, a wishlist system, and seller verification.',
+        NULL,
+        NULL,
+        4,
+        0
+    ),
+    -- 5. Comtech — school department website
+    (
+        'Comtech — เว็บแผนกคอมพิวเตอร์',
+        'Comtech — Computer Dept. Website',
+        'web',
+        'เว็บไซต์ประชาสัมพันธ์แผนกวิชาเทคโนโลยีคอมพิวเตอร์ พัฒนาด้วย PHP + MySQL ประกอบด้วยระบบข่าวสาร โครงสร้างหลักสูตร รางวัล ผลงานนักศึกษา และ Admin Panel ครบชุด',
+        'Promotional website for a computer technology department, built with PHP and MySQL. Includes a news system, curriculum structure, awards, student projects, and a full admin panel.',
+        NULL,
+        NULL,
+        5,
+        0
+    ),
+    -- 6. Novis — Minecraft server on Docker
+    (
+        'Novis — Minecraft Server Infrastructure',
+        'Novis — Minecraft Server Infrastructure',
+        'hardware',
+        'โครงสร้างพื้นฐานเซิร์ฟเวอร์ Minecraft บน Docker (Paper 1.21) ประกอบด้วย MySQL 8.0 สำหรับ LuckPerms/AuthMe, phpMyAdmin และ PHP Web Interface รองรับ cross-platform (macOS, Linux, Windows)',
+        'Docker-based Minecraft server infrastructure running Paper 1.21, MySQL 8.0 for LuckPerms and AuthMe plugins, phpMyAdmin, and a PHP web interface for events and top-up — cross-platform across macOS, Linux, and Windows.',
+        NULL,
+        NULL,
+        6,
+        0
+    ),
+    -- 7. Personal portfolio website (this site)
     (
         'เว็บพอร์ตโฟลิโอส่วนตัว — khunnatt.online',
         'Personal Portfolio — khunnatt.online',
@@ -75,6 +135,6 @@ VALUES
         'Personal portfolio built with pure PHP & MariaDB. iOS 26 "Liquid Aura" Glassmorphism design, asymmetric Bento-grid layout, GSAP animations, bilingual TH/EN support, and a full Docker development environment.',
         NULL,
         'https://github.com/k-zencool/khunnatt.online',
-        2,
+        7,
         0
     );
