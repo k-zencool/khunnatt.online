@@ -18,13 +18,71 @@ $activeFilter    = (isset($_GET['cat']) && in_array($_GET['cat'], $validCategori
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?= h(t('hero_tagline')) ?>">
+
+  <?php if (LANG === 'th'): ?>
+  <title>Khun Natt — นักพัฒนาเว็บเชียงใหม่ | Full-Stack Developer</title>
+  <meta name="description" content="Khun Natt นักพัฒนาเว็บและ IT Support เชียงใหม่ รับทำเว็บไซต์ด้วย PHP, Node.js, MySQL, Docker ผลงานจริง เช่น CMNS FixMac, Aqua Platform, NextHand">
+  <meta name="keywords"    content="นักพัฒนาเว็บเชียงใหม่, รับทำเว็บเชียงใหม่, web developer เชียงใหม่, PHP developer, full stack developer chiang mai, khun natt, khunnatt">
+  <?php else: ?>
+  <title>Khun Natt — Web Developer Chiang Mai | Full-Stack Developer Thailand</title>
+  <meta name="description" content="Khun Natt — Full-Stack Web Developer & IT Support based in Chiang Mai, Thailand. Building with PHP, Node.js, MySQL, and Docker. See real projects: CMNS FixMac, Aqua Platform, NextHand.">
+  <meta name="keywords"    content="web developer chiang mai, full stack developer thailand, PHP developer chiang mai, khun natt developer, khunnatt.online">
+  <?php endif; ?>
+
+  <meta name="author"      content="Khun Natt">
+  <meta name="robots"      content="index, follow">
+  <link rel="canonical"    href="<?= h(SITE_URL) ?>">
   <meta name="theme-color" content="#00d4ff">
-  <meta property="og:title"       content="<?= h(SITE_NAME) ?> — Portfolio">
-  <meta property="og:description" content="<?= h(t('hero_tagline')) ?>">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Khun Natt — <?= LANG === 'th' ? 'นักพัฒนาเว็บเชียงใหม่' : 'Web Developer Chiang Mai' ?>">
+  <meta property="og:description" content="<?= LANG === 'th' ? 'รับทำเว็บไซต์ PHP · Node.js · MySQL · Docker เชียงใหม่' : 'Full-Stack Developer based in Chiang Mai, Thailand' ?>">
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="<?= h(SITE_URL) ?>">
-  <title><?= h(SITE_NAME) ?> · Portfolio</title>
+  <meta property="og:image"       content="<?= h(SITE_URL) ?>/assets/images/project-cmnsfixmac-hero.webp">
+  <meta property="og:locale"      content="<?= LANG === 'th' ? 'th_TH' : 'en_US' ?>">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Khun Natt — <?= LANG === 'th' ? 'นักพัฒนาเว็บเชียงใหม่' : 'Web Developer Chiang Mai' ?>">
+  <meta name="twitter:description" content="<?= LANG === 'th' ? 'รับทำเว็บไซต์ PHP · Node.js · MySQL · Docker เชียงใหม่' : 'Full-Stack Developer based in Chiang Mai, Thailand' ?>">
+  <meta name="twitter:image"       content="<?= h(SITE_URL) ?>/assets/images/project-cmnsfixmac-hero.webp">
+
+  <!-- JSON-LD: Person + WebSite structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "<?= SITE_URL ?>/#person",
+        "name": "Khun Natt",
+        "url": "<?= SITE_URL ?>",
+        "email": "zencool@gmail.com",
+        "jobTitle": "Full-Stack Web Developer",
+        "description": "<?= LANG === 'th' ? 'นักพัฒนาเว็บและ IT Support เชียงใหม่ ประเทศไทย' : 'Full-Stack Web Developer and IT Support based in Chiang Mai, Thailand' ?>",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chiang Mai",
+          "addressCountry": "TH"
+        },
+        "knowsAbout": ["PHP", "Node.js", "MySQL", "Docker", "JavaScript", "TypeScript", "PostgreSQL"],
+        "sameAs": ["https://github.com/k-zencool"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "<?= SITE_URL ?>/#website",
+        "url": "<?= SITE_URL ?>",
+        "name": "Khun Natt Portfolio",
+        "description": "<?= LANG === 'th' ? 'พอร์ตโฟลิโอนักพัฒนาเว็บเชียงใหม่' : 'Web Developer Portfolio — Chiang Mai, Thailand' ?>",
+        "inLanguage": ["th", "en"],
+        "author": { "@id": "<?= SITE_URL ?>/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <title><?= LANG === 'th' ? 'Khun Natt — นักพัฒนาเว็บเชียงใหม่ | Full-Stack Developer' : 'Khun Natt — Web Developer Chiang Mai | Full-Stack Developer Thailand' ?></title>
 
   <!-- Anti-flash: set theme before first paint -->
   <script>

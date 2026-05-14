@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Thai (default) -->
+  <url>
+    <loc>https://khunnatt.online/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://khunnatt.online/?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://khunnatt.online/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://khunnatt.online/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- English alternate -->
+  <url>
+    <loc>https://khunnatt.online/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://khunnatt.online/?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://khunnatt.online/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://khunnatt.online/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
