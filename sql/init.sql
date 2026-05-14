@@ -66,63 +66,15 @@ VALUES
         1,
         1   -- is_featured = true → rendered in the largest bento cell
     ),
-    -- 2. Personal portfolio website
+    -- 2. Personal portfolio website (this site)
     (
-        'เว็บพอร์ตโฟลิโอส่วนตัว',
-        'Personal Portfolio Website',
+        'เว็บพอร์ตโฟลิโอส่วนตัว — khunnatt.online',
+        'Personal Portfolio — khunnatt.online',
         'web',
-        'เว็บไซต์พอร์ตโฟลิโอส่วนตัวที่พัฒนาด้วย PHP บริสุทธิ์และ MariaDB พร้อมดีไซน์ Glassmorphism สไตล์ iOS 26 รองรับสองภาษา (ไทย/อังกฤษ) และ Docker สำหรับสภาพแวดล้อมการพัฒนา',
-        'A personal portfolio built with pure PHP & MariaDB, featuring an iOS 26-inspired Liquid Glass design, bilingual support (TH/EN), and a full Docker development environment.',
+        'เว็บไซต์พอร์ตโฟลิโอส่วนตัวที่พัฒนาด้วย PHP บริสุทธิ์และ MariaDB พร้อมดีไซน์ Glassmorphism สไตล์ iOS 26 "Liquid Aura" ระบบ Bento-grid อสมมาตร GSAP animation รองรับสองภาษา (ไทย/อังกฤษ) และ Docker สำหรับ local development',
+        'Personal portfolio built with pure PHP & MariaDB. iOS 26 "Liquid Aura" Glassmorphism design, asymmetric Bento-grid layout, GSAP animations, bilingual TH/EN support, and a full Docker development environment.',
         NULL,
-        'https://github.com/khunnatt/portfolio',
+        'https://github.com/k-zencool/khunnatt.online',
         2,
-        0
-    ),
-    -- 2. Database project
-    (
-        'ระบบฐานข้อมูลสินค้าคงคลัง',
-        'Inventory Management Database',
-        'database',
-        'ออกแบบและพัฒนาโครงสร้างฐานข้อมูลเชิงสัมพันธ์สำหรับบริหารสินค้าคงคลัง รองรับ Stored Procedures, Views และ Triggers พร้อมรายงานสรุปรายวัน/รายเดือน',
-        'Designed a normalised relational schema for inventory management, with stored procedures, views, triggers, and automated daily/monthly summary reports.',
-        'assets/images/project-database.jpg',
-        NULL,
-        2,
-        0
-    ),
-    -- 3. Hardware project
-    (
-        'การประกอบและอัปเกรด PC',
-        'PC Assembly & Upgrade',
-        'hardware',
-        'ประสบการณ์การประกอบคอมพิวเตอร์ตั้งโต๊ะและแล็ปท็อป การอัปเกรดส่วนประกอบ (CPU/GPU/SSD) และการแก้ไขปัญหาฮาร์ดแวร์ระดับชิ้นส่วน',
-        'Hands-on experience in desktop and laptop assembly, component upgrades (CPU/GPU/SSD migration), and component-level hardware troubleshooting.',
-        'assets/images/project-hardware.jpg',
-        NULL,
-        3,
-        0
-    ),
-    -- 4. IT Support project
-    (
-        'การสนับสนุน IT ระดับองค์กร',
-        'Enterprise IT Support',
-        'it_support',
-        'ให้บริการสนับสนุนด้านไอทีแก่ผู้ใช้ในองค์กร ครอบคลุมการติดตั้งระบบเครือข่าย Active Directory การจัดการ GPO และการแก้ไขปัญหาระยะไกล',
-        'Delivered first-line IT support including network setup, Active Directory & GPO management, remote troubleshooting, and hardware imaging for enterprise clients.',
-        'assets/images/project-it-support.jpg',
-        NULL,
-        4,
-        0
-    ),
-    -- 5. Additional web project
-    (
-        'ระบบบันทึกรายรับ-รายจ่าย',
-        'Personal Finance Tracker',
-        'web',
-        'แอปพลิเคชันเว็บสำหรับบันทึกรายรับ-รายจ่ายส่วนตัว พร้อมกราฟสรุปรายเดือนและการส่งออกข้อมูล CSV',
-        'A PHP web app for tracking personal income and expenses, with monthly summary charts and CSV export functionality.',
-        'assets/images/project-finance.jpg',
-        NULL,
-        5,
         0
     );

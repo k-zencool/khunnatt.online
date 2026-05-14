@@ -31,8 +31,8 @@ const TRANSLATIONS = [
 
   'about_title' => ['th' => 'เกี่ยวกับฉัน', 'en' => 'About Me'],
   'about_body'  => [
-    'th' => 'นักพัฒนาที่หลงใหลในการสร้างเว็บแอปพลิเคชันที่สวยงามและมีประสิทธิภาพ มีประสบการณ์ด้าน PHP, MySQL, Linux และ Docker พร้อมทักษะ IT Support ระดับองค์กร',
-    'en' => 'A developer passionate about building beautiful and performant web applications. Experienced in PHP, MySQL, Linux, and Docker, with enterprise-level IT support skills.',
+    'th' => 'นักพัฒนาเว็บและ IT Support ที่หลงใหลในการสร้างระบบที่ใช้งานได้จริง มีประสบการณ์ด้าน PHP, MySQL, Docker และ Linux พร้อมทักษะดูแลฮาร์ดแวร์และสนับสนุนไอทีในองค์กร รักการเรียนรู้สิ่งใหม่ๆ และพัฒนาตัวเองอย่างต่อเนื่อง',
+    'en' => 'A web developer and IT support specialist who loves building things that actually work. Hands-on with PHP, MySQL, Docker, and Linux — plus hardware maintenance and on-site IT support. Always learning, always building.',
   ],
 
   'footer_rights' => ['th' => 'สงวนลิขสิทธิ์', 'en' => 'All rights reserved'],
